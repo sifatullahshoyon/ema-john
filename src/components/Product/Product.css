@@ -50,4 +50,11 @@
     position: absolute;
     bottom: 0;
     margin-top: 10px;
+    font-size: 15px;
+    color: #0E161A;
+    cursor: pointer;
+}
+
+.btn-cart:hover {
+    background-color: #FF9900;
 }
