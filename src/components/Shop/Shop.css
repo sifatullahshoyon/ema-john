@@ -9,3 +9,7 @@
     grid-gap: 45px;
     margin: 200px 85px 50px 100px;
 }
+
+.cart-container {
+    width: 100%;
+}
