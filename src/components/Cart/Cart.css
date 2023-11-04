@@ -1,39 +1,58 @@
 .cart {
-    background-color: rgba(255, 153, 0, 0.30);
-    position: sticky;
-    top: 0;
-    padding: 30px 45px;
-    /* height: 100%; */
+  background-color: rgba(255, 153, 0, 0.3);
+  position: sticky;
+  top: 0;
+  padding: 30px 45px;
+  /* height: 100%; */
 }
 
 .cart h5 {
-    margin-top: 0;
-    padding-bottom: 50px;
-    text-align: center;
-    font-family: Lato;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  margin-top: 0;
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: Lato;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .cart p {
-    font-family: Lato;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.085px;
-    padding-bottom: 25px;
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px;
+  padding-bottom: 25px;
 }
 
 .cart h6 {
-    font-family: Lato;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.032px;
-    color: #0E161A;
-    margin-top: 0;
+  font-family: Lato;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
+  color: #0e161a;
+  margin-top: 0;
+}
+
+.btn-clear-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #ff3030;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
 }
