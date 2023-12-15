@@ -1,40 +1,50 @@
-import React, { useContext, useState } from "react";
-import "./Login.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProviders";
+import React, { useContext, useState } from 'react';
+import './SignUp.css';
+import { Link } from "react-router-dom";
+import { AuthContext } from '../../providers/AuthProviders';
 
-const Login = () => {
+const SignUp = () => {
     const [error , setError] = useState('');
-    const {signIn} = useContext(AuthContext);
-    const navigate = useNavigate();
-    const location = useLocation();
-    console.log(location);
-    const from = location.state?.from?.pathname || '/';
+    const {createUser} = useContext(AuthContext);
 
-    const handleLogIn = (event) => {
+    const handleSignUp = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        const confirmPassword = form.confirm.value;
+        console.log(email , password , confirmPassword);
+        
+        setError('');
 
-        signIn(email , password)
+        if(password !== confirmPassword){
+            setError('Your Password did not match');
+            return;
+        }
+         if(password.length < 6){
+        setError('password must be 6 digit');
+        return;
+        }
+
+        createUser(email , password)
         .then((result) => {
             const loggedUser = result.user;
             console.log(loggedUser);
-            form.reset();
-            navigate(from , {replace : true})
         })
         .catch((error) => {
-            setError(error.message);
             console.error(error);
+            setError(error.message);
         })
-    };
+    }
 
-  return (
-    <div className="form-container">
-      <h4 className="form-title">Login</h4>
-       <form onSubmit={handleLogIn}>
-       <div className="form-control">
+    
+   
+
+    return (
+        <div className="form-container">
+      <h4 className="form-title">Sign Up</h4>
+      <form onSubmit={handleSignUp}>
+      <div className="form-control">
         <label htmlFor="email">Email</label>
         <input type="email" name="email" id="email" required />
       </div>
@@ -42,11 +52,15 @@ const Login = () => {
         <label htmlFor="password">Password</label>
         <input type="password" name="password" id="password" required />
       </div>
-      <input className="btn-submit" type="submit" value="Login" />
+      <div className="form-control">
+        <label htmlFor="confirm">Confirm Password</label>
+        <input type="password" name="confirm" id="confirm" required />
+      </div>
+      <input className="btn-submit" type="submit" value="Sign Up" />
       <p className="account">
-        New to Ema-john?{" "}
+      Already have an account?{" "}
         <small>
-          <Link to='/signup'>Create New Account</Link>
+          <Link to='/login'>Login</Link>
         </small>
       </p>
       <div className="or">
@@ -81,9 +95,10 @@ const Login = () => {
         </span>
         <small>Continue with Google</small>
       </button>
-       </form>
+      <p className='text-error'>{error}</p>
+      </form>
     </div>
-  );
+    );
 };
 
-export default Login;
+export default SignUp;

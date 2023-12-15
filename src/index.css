@@ -1,3 +1,11 @@
+/* Google Font Family CDN Link goes here */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+  font-family: 'Lato', sans-serif;
+}
+
+
 body {
   margin: 0;
   display: flex;

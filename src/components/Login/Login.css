@@ -1,0 +1,126 @@
+.form-container {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #95a0a7;
+  margin: 128px auto;
+  box-shadow: rgba(255, 224, 179, 1) -25px 25px;
+}
+
+.form-title {
+  font-family: Lato;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.088px;
+  color: #2a414f;
+  text-align: center;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  padding: 0 42px;
+}
+
+.form-control label {
+  display: block;
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.026px;
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  width: 415px;
+  height: 55px;
+  border-radius: 5px;
+  border: 1px solid #95a0a7;
+  padding-left: 10px;
+  font-size: 1em;
+  font-family: Lato;
+}
+
+.btn-submit {
+  width: 415px;
+  height: 55px;
+  border-radius: 5px;
+  background: rgba(255, 153, 0, 0.3);
+  margin: 44px 0px 10px 42px;
+  border: none;
+  cursor: pointer;
+  font-family: Lato;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
+  color: #0e161a;
+  transition: 0.5s;
+}
+
+.btn-submit:hover {
+  background: rgba(255, 153, 0, 0.6);
+}
+
+.account {
+  text-align: center;
+  color: #2a414f;
+
+  font-family: Lato;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.038px;
+}
+
+.account small a {
+  color: #f90;
+  text-decoration: none;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 42px;
+}
+
+.or hr {
+  width: 50%;
+}
+
+.or span {
+  margin: 0 10px;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 415px;
+  height: 55px;
+  margin: 42px auto;
+  border-radius: 8px;
+  border: 1px solid #95a0a7;
+  background: #fff;
+  cursor: pointer;
+  transform: 0.5s;
+  color: #2a414f;
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px;
+}
+
+.btn-google span {
+  width: 32px;
+  height: 32px;
+}
